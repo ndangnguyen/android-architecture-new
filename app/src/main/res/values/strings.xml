@@ -1,2 +1,4 @@
 <resources>
+    <string name="action_no_en">No</string>
+    <string name="action_ok_en">OK</string>
 </resources>

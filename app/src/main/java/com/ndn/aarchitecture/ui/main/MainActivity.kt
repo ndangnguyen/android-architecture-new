@@ -1,7 +1,8 @@
-package com.ndn.aarchitecture
+package com.ndn.aarchitecture.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ndn.aarchitecture.R
 
 class MainActivity : AppCompatActivity() {
 

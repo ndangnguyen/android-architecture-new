@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Versions.compileSdkVersion)
-    buildToolsVersion(Versions.buildToolsVersion)
+    compileSdkVersion(Versions.COMPILE_SDK_VERSION)
+    buildToolsVersion(Versions.BUILD_TOOL_VERSION)
 
     defaultConfig {
         applicationId = "com.ndn.androidarchitecture"
-        minSdkVersion(Versions.minSdkVersion)
-        targetSdkVersion(Versions.targetSdkVersion)
+        minSdkVersion(Versions.MIN_SDK_VERSION)
+        targetSdkVersion(Versions.TARGET_SDK_VERSION)
         versionCode = 1
         versionName = "1.0"
         vectorDrawables.useSupportLibrary = true
@@ -66,10 +66,60 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(Dependencies.kotlinStdlib)
-    implementation(Dependencies.supportAppCompat)
-    implementation(Dependencies.supportCoreKtx)
-    implementation(Dependencies.constraintLayout)
-    implementation(Dependencies.supportDesign)
-    implementation(Dependencies.supportCore)
+
+    // Kotlin
+    implementation(Dependencies.KOTLIN_STDLIB)
+
+    // App compat & design
+    implementation(Dependencies.SUPPORT_APP_COMPAT)
+    implementation(Dependencies.SUPPORT_CORE)
+    implementation(Dependencies.SUPPORT_CORE_KTX)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.SUPPORT_DESIGN)
+
+    // App compat & design
+    implementation(Dependencies.SUPPORT_APP_COMPAT)
+    implementation(Dependencies.SUPPORT_CORE)
+    implementation(Dependencies.SUPPORT_DESIGN)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+
+    // Rxjava
+    implementation(Dependencies.RXJAVA)
+    implementation(Dependencies.RXANDROID)
+    implementation(Dependencies.RXJAVA3_EXTENSION)
+
+    // Coroutines
+    implementation(Dependencies.COROUTINES_CORE)
+    implementation(Dependencies.COROUTINES_ANDROID)
+
+    // Retrofit
+    implementation(Dependencies.RETROFIT)
+    implementation(Dependencies.RETROFIT_CONVERTER_GSON)
+
+    // Okhttp
+    implementation(Dependencies.OKHTTP)
+    implementation(Dependencies.OKHTTP_LOGGING)
+
+    // Koin
+    implementation(Dependencies.KOIN_VIEW_MODEL)
+    implementation(Dependencies.KOIN_EXT)
+
+    // Glide
+    implementation(Dependencies.GLIDE)
+    annotationProcessor(Dependencies.GLIDE_COMPILE)
+    kapt(Dependencies.GLIDE_COMPILE)
+
+    // Leak canary
+    debugImplementation(Dependencies.LEAK_CANARY)
+
+    // Timber
+    implementation(Dependencies.TIMBER)
+
+    // KTX
+    implementation(Dependencies.SUPPORT_CORE_KTX)
+    implementation(Dependencies.VIEW_MODEL_KTX)
+    implementation(Dependencies.LIVE_DATA_KTX)
+
+    // Lottie
+    implementation(Dependencies.LOTTIE)
 }
